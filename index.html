@@ -65,7 +65,6 @@
 <body>
   <div class="page">
     <div class="image-wrap">
-      <!-- 放自己的圖：把圖片檔放在和 index.html 同一個資料夾，下面 src 改成你的檔名，例如 myphoto.jpg 或 photo.png -->
       <img src="SEWING%20kiTT.jpg" alt="sewing kit" />
     </div>
     <footer class="footer">
@@ -74,7 +73,7 @@
   </div>
   <script>
     (function () {
-      var email = '0628hwy@gmail.com'; // 請改成你的真實郵箱
+      var email = '0628hwy@gmail.com';
       var body = [
         'Dear wenyan，',
         '',
@@ -87,7 +86,7 @@
         "if you feel like sending something back one day,",
         "here's where it could go:"
       ].join('\n');
-      document.getElementById('mail-me').href = 'mailto:' + encodeURIComponent(email) + '?body=' + encodeURIComponent(body);
+      document.getElementById('mail-me').href = 'mailto:' + email + '?body=' + encodeURIComponent(body);
     })();
   </script>
 </body>
