@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sewing kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .page {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .image-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.5rem 1rem 2rem;
+      text-align: center;
+      background: transparent;
+    }
+    .mail-link {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.06em;
+      color: #f7f0e9;
+      text-decoration: none;
+      border-bottom: none;
+      padding-bottom: 2px;
+      transition: color 0.2s ease;
+    }
+    .mail-link:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="image-wrap">
+      <!-- 放自己的圖：把圖片檔放在和 index.html 同一個資料夾，下面 src 改成你的檔名，例如 myphoto.jpg 或 photo.png -->
+      <img src="SEWING%20kiTT.jpg" alt="sewing kit" />
+    </div>
+    <footer class="footer">
+      <a href="#" class="mail-link" id="mail-me">mail me</a>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var email = 'your@email.com'; // 請改成你的真實郵箱
+      var body = [
+        'Dear wenyan，',
+        '',
+        'i found a sewing kit and threaded it a little.',
+        '',
+        '[ attach image here ]',
+        '',
+        'my name:',
+        '',
+        "if you feel like sending something back one day,",
+        "here's where it could go:"
+      ].join('\n');
+      document.getElementById('mail-me').href = 'mailto:' + encodeURIComponent(email) + '?body=' + encodeURIComponent(body);
+    })();
+  </script>
+</body>
+</html>
